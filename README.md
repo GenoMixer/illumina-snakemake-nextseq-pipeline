@@ -14,7 +14,9 @@ Download or clone this repository in the runfolder of the NextSeq 550 with the c
 221127_NB442557_0103_AH4v22BGXN  \
 └──SampleSheet.csv  \
 └── Alignment_1    \
+</br>
     └── 20221215_184340   \
+</br>
         └── Fastq 
         
 ## Workflow
