@@ -8,7 +8,7 @@ Workflow for merging multi-lane sample-wise raw data from the Illumina NextSeq 5
 - FastQC and MultiQC available via conda 
 
 ## Directory Structure
-When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<run folder>\Alignment_1\<subfolder>\Fastq". For each sample the sequenceer generates overall 8 fastq files for each lane and read pair in case of paired end data ("*_L00[1-4]_R[1,2]_001.fastq.gz"). 
+When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<run folder>\Alignment_1\<subfolder>\Fastq". For each sample the sequenceer generates overall 8 fastq files for each lane and read pair ("*_L00[1-4]_R[1,2]_001.fastq.gz"). 
 
 221127_NB442557_0103_AH4v22BGXN  \
 └──SampleSheet.csv  \
