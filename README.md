@@ -18,7 +18,7 @@ When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<
         
 ## Usage
 
-1. Clone the repository:
+1. Clone the repository into the runfolder (parent directory):
 
     ```bash
     git clone https://github.com/GenoMixer/NextSeq-RawData-Merge.git
