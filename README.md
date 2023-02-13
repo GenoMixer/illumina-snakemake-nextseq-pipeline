@@ -11,8 +11,7 @@ Workflow for merging multi-lane fastq files from the Illumina NextSeq 550 using 
 When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<run folder>\Alignment_1\<subfolder>\Fastq". For each sample the sequencer generates fastq files per lane and read orientation. The format in which the fastq file are stored looks like this ("*_L00[1-4]_R[1-2]_001.fastq.gz"). After merging the fastq files the lane information will be discarded.  The output of the merged the data will be stored in the "unaligned" directory in the flowcell folder with the corresponding QC and checksums.
 
 ```bash
- 
-NextSeq-Runfolder
+Runfolder
 ├── SampleSheet.csv
 ├── Alignment_1
 │   └── 20221215_184340
