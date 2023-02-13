@@ -14,8 +14,8 @@ When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<
 221127_NB442557_0103_AH4v22BGXN  \
 └──SampleSheet.csv  \
 └── Alignment_1    \
-&nbsp;&nbsp; └── 20221215_184340   \
-&nbsp;&nbsp;&nbsp;&nbsp; └── Fastq
+    └── 20221215_184340   \
+        └── Fastq
 ```
 
 ## Usage
