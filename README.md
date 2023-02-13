@@ -13,7 +13,7 @@ Workflow for merging multi-lane sample-wise raw data from the Illumina NextSeq 5
 └──SampleSheet.csv  \
 └── Alignment_1    \
 &nbsp;&nbsp; └── 20221215_184340   \
-&nbsp;&nbsp;&nbsp; └── Fastq 
+&nbsp;&nbsp;&nbsp;&nbsp; └── Fastq 
         
 ## Usage
 
