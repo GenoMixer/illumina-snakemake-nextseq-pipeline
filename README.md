@@ -2,7 +2,7 @@
 Workflow for merging multi-lane fastq files from the Illumina NextSeq 550 using Snakemake. In addition, basic QC and md5 checksums are generated.
 
 ## Requirement
-- Unix (tested on Debian)
+- Linux (tested on Debian 9.13)
 - Snakemake
 - Python 3.5+
 - FastQC and MultiQC
