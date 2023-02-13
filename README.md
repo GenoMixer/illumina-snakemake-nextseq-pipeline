@@ -12,7 +12,7 @@ When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<
 
 ```bash
  
-221127_NB442557_0103_AH4v22BGXN
+NextSeq-Runfolder
 ├── SampleSheet.csv
 ├── Alignment_1
 │   └── 20221215_184340
@@ -35,7 +35,7 @@ When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<
 
 ## Usage
 
-1. Clone the repository into the runfolder (parent directory):
+1. Clone the repository into the runfolder:
 
     ```bash
     git clone https://github.com/GenoMixer/NextSeq-RawData-Merge.git
