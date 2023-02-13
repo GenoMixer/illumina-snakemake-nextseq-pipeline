@@ -1,5 +1,5 @@
 # NextSeq-RawData-Merge
-Workflow for merging multi-lane sample-wise raw data from the Illumina NextSeq 550 using Snakemake. In addition, basic QC is applied and md5 checksums generated.
+Workflow for merging multi-lane sample-wise raw data from the Illumina NextSeq 550 using Snakemake. In addition, basic QC is applied and md5 checksums are generated.
 
 ## Requirement
 
@@ -7,6 +7,16 @@ Workflow for merging multi-lane sample-wise raw data from the Illumina NextSeq 5
 - Snakemake
 - Python 3.5+
 - FastQC and MultiQC available via conda 
+
+## Usage
+Download or clone this repository in the runfolder of the NextSeq 550 with the corresponding file structure.
+
+221127_NB442557_0103_AH4v22BGXN
+ └──SampleSheet.csv
+ └── Alignment_1
+    └── 20221215_184340
+        └── Fastq
+
 
 1. Clone the repository:
 
