@@ -1,5 +1,5 @@
 # NextSeq-RawData-Merge
-Workflow for merging multi-lane fastq files from the Illumina NextSeq 550 using Snakemake. In addition, basic QC is applied and md5 checksums are generated.
+Workflow for merging multi-lane fastq files from the Illumina NextSeq 550 using Snakemake. In addition, basic QC and md5 checksums are generated.
 
 ## Requirement
 - Unix (tested on Debian)
@@ -8,7 +8,7 @@ Workflow for merging multi-lane fastq files from the Illumina NextSeq 550 using 
 - FastQC and MultiQC
 
 ## Directory Structure
-When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<run folder>\Alignment_1\<subfolder>\Fastq". For each sample the sequencer generates fastq files for each lane and read orientation. The format in which the fastq file are stored looks like this ("*_L00[1-4]_R[1-2]_001.fastq.gz"). After merging the lane information is discarded from the sample name.
+When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<run folder>\Alignment_1\<subfolder>\Fastq". For each sample the sequencer generates fastq files for each lane and read orientation. The format in which the fastq file are stored looks like this ("*_L00[1-4]_R[1-2]_001.fastq.gz"). After merging the fastq files the lane information will discarded from the file name.  The output of the merged the data will be stored in a directory called "unaligned" with the corresponding QC and checksums.
 
 ```bash
 221127_NB442557_0103_AH4v22BGXN  \
@@ -16,6 +16,21 @@ When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<
 └── Alignment_1    \
     └── 20221215_184340   \
         └── Fastq
+    
+
+221127_NB442557_0103_AH4v22BGXN
+ ├── SampleSheet.csv
+ ├── Alignment_1
+ │   └── 20221215_184340
+ │       └── Fastq
+ │           ├── samp1_L001_R1_001.fastq.gz
+ │           ├── samp1_L001_R2_001.fastq.gz
+ │           ├── samp1_L002_R1_001.fastq.gz
+ │           ├── samp1_L002_R2_001.fastq.gz
+ │           ├── samp1_L003_R1_001.fastq.gz
+ │           ├── samp1_L003_R2_001.fastq.gz
+ │           ├── samp1_L004_R1_001.fastq.gz
+ │           └── samp1_L004_R2_001.fastq.gz
 ```
 
 ## Usage
