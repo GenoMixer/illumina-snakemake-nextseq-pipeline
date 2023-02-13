@@ -11,9 +11,9 @@ Workflow for merging multi-lane sample-wise raw data from the Illumina NextSeq 5
 ## Directory Structure
 221127_NB442557_0103_AH4v22BGXN  \
 └──SampleSheet.csv  \
-&nbsp; └── Alignment_1    \
-&nbsp;&nbsp;└── 20221215_184340   \
-&nbsp;&nbsp;&nbsp;└── Fastq 
+└── Alignment_1    \
+&nbsp;&nbsp; └── 20221215_184340   \
+&nbsp;&nbsp;&nbsp; └── Fastq 
         
 ## Usage
 
