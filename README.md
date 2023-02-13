@@ -12,11 +12,12 @@ Workflow for merging multi-lane sample-wise raw data from the Illumina NextSeq 5
 Download or clone this repository in the runfolder of the NextSeq 550 with the corresponding file structure.
 
 221127_NB442557_0103_AH4v22BGXN \
- └──SampleSheet.csv \
- └── Alignment_1 \
-    └── 20221215_184340 \
-        └── Fastq \
-
+~└──SampleSheet.csv \
+~└── Alignment_1 \
+~~    └── 20221215_184340 \
+~~~       └── Fastq 
+        
+## Workflow
 
 1. Clone the repository:
 
