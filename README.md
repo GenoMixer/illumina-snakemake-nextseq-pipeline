@@ -8,16 +8,14 @@ Workflow for merging multi-lane sample-wise raw data from the Illumina NextSeq 5
 - Python 3.5+
 - FastQC and MultiQC available via conda 
 
-## Usage
-Download or clone this repository in the runfolder of the NextSeq 550 with the corresponding file structure.
-
+## Directory Structure
 221127_NB442557_0103_AH4v22BGXN  \
 └──SampleSheet.csv  \
 └── Alignment_1    \
-  </br>  └── 20221215_184340   \
-</br>└── Fastq 
+└── 20221215_184340   \
+└── Fastq 
         
-## Workflow
+## Usage
 
 1. Clone the repository:
 
