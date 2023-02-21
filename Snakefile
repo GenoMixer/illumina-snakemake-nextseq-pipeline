@@ -34,7 +34,7 @@ rule all:
          expand("unaligned/{sample}_1.fq.gz", sample=samples.index),
          expand("unaligned/{sample}_2.fq.gz", sample=samples.index),
          expand("unaligned/md5sum.txt", sample=samples.index),
-         expand("unaligned/multiqc_report.html", sample=samples.index, read=READ),
+         expand(os.path.join("unaligned/" + RUN + "_MultiQC_Report.html"), sample=samples.index, read=READ),
 #         S3.remote(os.path.join(BUCKET,RUN))
 
 rule fq_1:
@@ -80,8 +80,8 @@ rule multiqc:
         expand("unaligned/{sample}_{read}_fastqc.html", sample=samples.index, read=READ),
         expand("unaligned/{sample}_{read}_fastqc.zip", sample=samples.index, read=READ)
      group: "qc"
-     output: "unaligned/multiqc_report.html"
-     shell: "multiqc -f -o unaligned {input} --no-data-dir"
+     output: os.path.join("unaligned/" + RUN + "_MultiQC_Report.html")
+     shell: "multiqc -f {input} --filename {output} --no-data-dir"
 
 #rule upload:
 #     input: "unaligned"
