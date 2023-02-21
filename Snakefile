@@ -17,7 +17,7 @@ RUN = tail.split("_")[0]
 
 # samples
 samples=pd.read_csv("SampleSheet.csv",skiprows=16).set_index("Sample_ID")
-print samples
+print(samples)
 
 # variables
 READ=["1", "2"]
