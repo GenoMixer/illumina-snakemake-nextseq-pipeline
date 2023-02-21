@@ -25,8 +25,8 @@ When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<
 │           ├── sample1_L004_R1_001.fastq.gz
 │           └── sample1_L004_R2_001.fastq.gz
 ├── unaligned
-│   ├── sample1_1.fastq.gz
-│   ├── sample1_2.fastq.gz
+│   ├── sample1_1.fq.gz
+│   ├── sample1_2.fq.gz
 │   ├── multiqc_report.html
 │   └── md5sum.txt
 ```
