@@ -35,7 +35,7 @@ rule all:
          expand("unaligned/{sample}_2.fq.gz", sample=samples.index),
          expand("unaligned/md5sum.txt", sample=samples.index),
          expand(os.path.join("unaligned/" + RUN + "_MultiQC_Report.html"), sample=samples.index, read=READ),
-#         S3.remote(os.path.join(BUCKET,RUN))
+#         S3.remote(os.path.join(BUCKET + RUN))
 
 rule fq_1:
     input: get_fq1
@@ -86,7 +86,7 @@ rule multiqc:
 #rule upload:
 #     input: "unaligned"
 #     group: "transfer"
-#     output: S3.remote(os.path.join(BUCKET,RUN))
+#     output: S3.remote(os.path.join(BUCKET + RUN))
 #     shell: "aws s3 sync {input} {output} --no-progress --endpoint-url http://s3.eu-west-1.amazonaws.com --region eu-west-1"
 
 
