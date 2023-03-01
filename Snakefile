@@ -24,10 +24,10 @@ READ=["1", "2"]
 
 # functions
 def get_fq1(wildcards):
-        return sorted(glob.glob("Alignment_1/*/Fastq/" + wildcards.sample + "_*_L*_R1_001.fastq.gz"))
+        return sorted(glob.glob("Alignment_1/*/Fastq/" + wildcards.sample + "_S*_L*_R1_001.fastq.gz"))
 
 def get_fq2(wildcards):
-        return sorted(glob.glob("Alignment_1/*/Fastq/" + wildcards.sample + "_*_L*_R2_001.fastq.gz"))
+        return sorted(glob.glob("Alignment_1/*/Fastq/" + wildcards.sample + "_S*_L*_R2_001.fastq.gz"))
 
 rule all:
     input:
