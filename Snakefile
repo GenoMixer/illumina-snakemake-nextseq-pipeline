@@ -1,4 +1,4 @@
-# libraries
+# modules
 import os
 import glob
 import numpy
@@ -6,7 +6,7 @@ import pandas as pd
 from pathlib import Path
 from snakemake.remote.S3 import RemoteProvider as S3RemoteProvider
 
-# working dir
+# get working dir and flowcell
 WORK  = os.getcwd()
 head, tail = os.path.split(WORK)
 RUN = tail.split("_")[0]
@@ -15,7 +15,7 @@ RUN = tail.split("_")[0]
 #S3 = S3RemoteProvider()
 #BUCKET = "s3://lvms-trial-xxx-varfeed/upload/"
 
-# samples
+# read samplesheet
 samples=pd.read_csv("SampleSheet.csv",skiprows=16).set_index("Sample_ID")
 print(samples)
 
@@ -40,13 +40,13 @@ rule all:
 rule fq_1:
     input: get_fq1
     group: "merge"
-    output: touch("unaligned/{sample}_1.fq.gz")
+    output: "unaligned/{sample}_1.fq.gz"
     shell: "zcat {input} | bgzip > {output}"
 
 rule fq_2:
     input: get_fq2
     group: "merge"
-    output: touch("unaligned/{sample}_2.fq.gz")
+    output: "unaligned/{sample}_2.fq.gz"
     shell: "zcat {input} | bgzip > {output}"
 
 rule md5_1:
