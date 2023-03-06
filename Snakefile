@@ -41,13 +41,13 @@ rule fq_1:
     input: get_fq1
     group: "merge"
     output: "unaligned/{sample}_1.fq.gz"
-    shell: "zcat {input} | bgzip > {output}"
+    shell: "cat {input} > {output}"
 
 rule fq_2:
     input: get_fq2
     group: "merge"
     output: "unaligned/{sample}_2.fq.gz"
-    shell: "zcat {input} | bgzip > {output}"
+    shell: "cat {input} > {output}"
 
 rule md5_1:
     input: rules.fq_1.output
