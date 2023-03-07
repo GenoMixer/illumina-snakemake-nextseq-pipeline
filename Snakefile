@@ -40,13 +40,13 @@ rule all:
 rule fq_1:
     input: get_fq1
     group: "merge"
-    output: "unaligned/{sample}_1.fq.gz"
+    output: touch("unaligned/{sample}_1.fq.gz")
     shell: "cat {input} > {output}"
 
 rule fq_2:
     input: get_fq2
     group: "merge"
-    output: "unaligned/{sample}_2.fq.gz"
+    output: touch("unaligned/{sample}_2.fq.gz")
     shell: "cat {input} > {output}"
 
 rule md5_1:
