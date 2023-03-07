@@ -39,7 +39,7 @@ When a NextSeq 550 sequencing run is completed the FASTQ files are located in "<
     git clone https://github.com/GenoMixer/NextSeq-RawData-Merge.git
     ```
 
-2. Activate the snakemake environemnt with FastQC and MultiQC:
+2. Activate the snakemake environment with FastQC and MultiQC:
 
     ```bash
     conda activate snakemake
