@@ -83,10 +83,11 @@ rule multiqc:
      output: os.path.join("unaligned/" + RUN + "_MultiQC_Report.html")
      shell: "multiqc -f {input} --filename {output} --no-data-dir"
 
+# permissions
+os.system('chmod -R 755 "unaligned/"')
+        
 #rule upload:
 #     input: "unaligned"
 #     group: "transfer"
 #     output: S3.remote(os.path.join(BUCKET + RUN))
 #     shell: "aws s3 sync {input} {output} --no-progress --endpoint-url http://s3.eu-west-1.amazonaws.com --region eu-west-1"
-
-
