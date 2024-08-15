@@ -1,4 +1,4 @@
-# NextSeq-RawData-Merge
+# Illumina NextSeq Pipeline
 Workflow for merging multi-lane fastq files from the Illumina NextSeq 550 using Snakemake. In addition, basic QC and md5 checksums are generated.
 
 ## Requirement
