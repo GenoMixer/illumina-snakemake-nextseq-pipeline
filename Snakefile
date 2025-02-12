@@ -82,9 +82,6 @@ rule multiqc:
      group: "qc"
      output: os.path.join("unaligned/" + RUN + "_MultiQC_Report.html")
      shell: "multiqc -f {input} --filename {output} --no-data-dir"
-
-# permissions
-os.system('chmod -R 755 "unaligned/"')
         
 #rule upload:
 #     input: "unaligned"
